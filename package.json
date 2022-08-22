@@ -15,11 +15,14 @@
     "@mantine/core": "^5.2.0",
     "@mantine/hooks": "^5.2.0",
     "@mantine/next": "^5.2.0",
+    "@prisma/client": "^4.2.1",
     "@tabler/icons": "^1.84.0",
     "next": "12.2.5",
+    "prisma": "^4.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.54.5"
+    "sass": "^1.54.5",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/node": "18.7.8",
