@@ -31,3 +31,8 @@ Prisma Clientの生成 ... npx prisma generate
 
 npx prisma migrate dev --create-only --name x
 npx prisma generate --watch
+
+
+curl -XPOST localhost:3000/api/posts -d 'title=1&content=aaaa'
+
+curl -XPOST localhost:3000/api/posts -H 'Content-Type: application/json' -d @dummy.json
