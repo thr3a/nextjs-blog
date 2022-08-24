@@ -28,3 +28,6 @@ Prisma Clientの生成 ... npx prisma generate
 本番
 マイグレーション履歴の設定 ... npx prisma migrate resolve
 マイグレーションの実行 ... npx prisma migrate deploy
+
+npx prisma migrate dev --create-only --name x
+npx prisma generate --watch

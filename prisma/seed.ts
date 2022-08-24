@@ -2,7 +2,7 @@ import { PrismaClient, Prisma } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const array: Prisma.PostCreateInput[] = [
+const array: Prisma.postsCreateInput[] = [
   {
     title: 'はろー',
     content: 'にゃあー'
@@ -12,7 +12,7 @@ const array: Prisma.PostCreateInput[] = [
 async function main() {
   console.log(`Start seeding ...`);
   for (const a of array) {
-    const post = await prisma.post.create({
+    const post = await prisma.posts.create({
       data: a,
     });
     console.log(`Created user with id: ${post.id}`);

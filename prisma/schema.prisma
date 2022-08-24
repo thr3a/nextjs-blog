@@ -11,12 +11,12 @@ datasource db {
 //   url      = "file:./dev.db"
 // }
 
-model Post {
+model posts {
   id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
   title String
   content String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
 
 // model User {
