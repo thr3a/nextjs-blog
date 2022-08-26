@@ -1,4 +1,5 @@
 import { Paper, Group, Text, Badge } from '@mantine/core';
+import Link from 'next/link';
 
 export type PostProps = {
   id: number;
@@ -9,10 +10,15 @@ export type PostProps = {
 
 export function Post(props: PostProps) {
   return (
-    <Group position="apart" mt="md" mb="xs">
-      <h2>{props.title}</h2>
-      <Text>{props.created_at}</Text>
-    </Group>
+    <Link href={`/posts/${props.id}`} passHref>
+      <Paper component="a">
+        <Group position="apart" mt="md" mb="xs" >
+          <h2>{props.title}</h2>
+          <Text>{props.created_at}</Text>
+        </Group>
+      </Paper>
+    </Link>
+
   );
 };
 
