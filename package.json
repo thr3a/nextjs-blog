@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "db-apply": "dotenv -e .env.dev -- npx prisma migrate dev --name init",
+    "db-deploy": "dotenv -e .env.production -- npx prisma migrate deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -22,7 +24,6 @@
     "prisma": "^4.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.34.2",
     "sass": "^1.54.5",
     "ts-node": "^10.9.1",
     "zod": "^3.18.0"

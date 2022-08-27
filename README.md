@@ -36,3 +36,10 @@ npx prisma generate --watch
 curl -XPOST localhost:3000/api/posts -d 'title=1&content=aaaa'
 
 curl -XPOST localhost:3000/api/posts -H 'Content-Type: application/json' -d @dummy.json
+
+
+# 本番実行
+
+```
+docker run --rm -p 3000:3000 -it -e DATABASE_URL='mysql://root:password@192.168.16.31:3306/mytest' my
+```

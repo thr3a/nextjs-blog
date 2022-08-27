@@ -1,4 +1,4 @@
-import { Paper, Group, Text, Badge } from '@mantine/core';
+import { Paper, Group, Text } from '@mantine/core';
 import Link from 'next/link';
 
 export type PostProps = {
