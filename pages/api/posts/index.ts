@@ -16,6 +16,11 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         },
       ],
     },
+    orderBy: [
+      {
+        id: 'desc',
+      }
+    ],
   });
   res.json(resultPosts);
 }

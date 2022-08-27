@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss';
 import { NextLink } from '@mantine/next';
 import { Button, Container } from '@mantine/core';
 import Post, { PostProps } from '../components/Post';
+import Link from 'next/link';
 
 type Props = {
   posts: PostProps[]
@@ -18,6 +19,9 @@ const Home: NextPage<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={styles.title}>マイブログ</h1>
+      <Link href="/new" passHref>
+        <Button component="a">新規投稿</Button>
+      </Link>
       {props.posts.map(({ id, title, created_at }) => (
         <div key={id}>
           <Post id={id} title={title} created_at={created_at}></Post>
