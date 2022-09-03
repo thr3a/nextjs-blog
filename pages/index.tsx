@@ -32,7 +32,7 @@ const Home: NextPage<Props> = (props: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/posts?searchString=');
+  const res = await fetch('http://127.0.0.1:3000/api/posts?searchString=');
   const posts = await res.json();
   return {
     props: { posts },
