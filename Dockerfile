@@ -1,15 +1,15 @@
-ARG NODE_VERSION=16
+ARG NODE_VERSION=18
 
 FROM node:$NODE_VERSION
 
-# ENV NODE_ENV=production
+ENV NODE_ENV=production
 
 WORKDIR /app
 
 COPY ./package.json ./
 COPY ./package-lock.json ./
 
-RUN npm install
+RUN npm install --production=false
 
 COPY . ./
 
