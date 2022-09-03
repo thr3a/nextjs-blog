@@ -17,7 +17,7 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["/app/startup.sh"]
+CMD ["bash", "/app/startup.sh"]
 
 # FROM node:$NODE_VERSION AS builder
 
