@@ -4,8 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url = "mysql://root:password@192.168.16.31:3306/nextjs_blog"
-  // url      = env("DATABASE_URL")
+  url = env("DATABASE_URL")
 }
 // datasource db {
 //   provider = "sqlite"
