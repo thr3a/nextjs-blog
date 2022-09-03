@@ -13,11 +13,11 @@ RUN npm install --production=false
 
 COPY . ./
 
-RUN npx prisma generate && npm run build
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD ["/app/startup.sh"]
 
 # FROM node:$NODE_VERSION AS builder
 
